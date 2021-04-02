@@ -1,0 +1,17 @@
+Sean Lee - macOS Terminal
+
+1. My computer's IP address is 192.168.1.7 and the command is ipconfig getifaddr en0.
+
+2. You could determine the ip address from a given hostname with the ping command followed by the hostname.
+
+3. You could determine the host name associated with a given IP address with nslookup command followed by the ip address but only if you have nslookup point to a DNS server that knows how to make this resolution. Alternatively, you could use the host command followed by the ip address. 
+
+4. To copy a file from the Kali virtual machine to Mac, you could use the scp filename.txt user@remote_server:/Users/YOURNAME/ command. 
+
+5. You could use the lsof command to find the process ID for a specific port. 
+
+6. To tell which ports have processes listening on them on a given host, you could use the sudo lsof -i -P | grep LISTEN command. 
+
+7. To retrieve and save a given webpage, use the curl -O command followed by the url you wish to retrieve. 
+
+8. To view the HTTP headers, you could use the curl -I command followed by the url. 
