@@ -1,0 +1,40 @@
+Sean Lee & Nacho Rodriquez-Cortes
+
+==========DAYTIME==========
+1.
+1	0.000000000	10.0.2.15	129.6.15.28	TCP	74	51238 → 13 [SYN] Seq=0 Win=64240 Len=0 MSS=1460 SACK_PERM=1 TSval=4004621167 TSecr=0 WS=128
+
+2	0.080078291	129.6.15.28	10.0.2.15	TCP	60	13 → 51238 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460
+
+3	0.080130231	10.0.2.15	129.6.15.28	TCP	54	51238 → 13 [ACK] Seq=1 Ack=1 Win=64240 Len=0
+
+2. The client uses port 13. The client needs a port in order to know where the connection is coming from. 
+
+3. 4	0.161519188	129.6.15.28	10.0.2.15	DAYTIME	105	DAYTIME Response
+
+4. The content of the Daytime frame consists of a Modified Julian Day, followed by the date, time, information relating to the transition of the daylight savings time, and finally the time advance in milliseconds.
+
+5. [SYN] is the synchronization marker. 
+
+6. [ACK] is the acknowledgement marker. 
+
+7. [FIN] is finalization marker. 
+
+8. The daytime server is initiating the closing sequence. We could tell because the source IP from the frame that starts the closing sequence comes from the daytime server. 
+
+
+
+==========HTTP==========
+1. 33 TCP connections were opened. 
+
+2. The homepage was requested on frame 4.
+
+4	0.026216902	10.0.2.15	45.79.89.123	HTTP	395	GET /index.html HTTP/1.1 
+
+3. The photograph was requested on frame 8.
+
+8	2.647908788	10.0.2.15	45.79.89.123	HTTP	364	GET /jeff_square_head.jpg HTTP/1.1 
+
+
+==========QUESTIONS==========
+1. Multiple frames contain "TCP segment of a reassembled PDU". What does this frame do exactly?
