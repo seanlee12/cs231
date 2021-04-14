@@ -1,0 +1,10 @@
+Sean Lee - Being Eve
+
+===Diffie Hellman===
+
+The shared secret agreed upon by Alice and Bob was determined to be 12. Work is shown in the pdf file. I figured out the shared secret by following the diagram between Alice and Bob as they figure out A and B. And then I figured out the equations to be 5 = 17^b mod61 and 46 = 17^a mod61. Then using wolfram, I solved this equation and found a = 74 and b = 86. With this I, figured out that the shared secret key was 12. If the B and A values that Bob and Alice sent to each other were much larger, this process would not have worked because no system would be able to compute the equations in a reasonable amount of time. 
+
+
+===RSA===
+
+The encrypted message that 
