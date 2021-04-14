@@ -7,4 +7,4 @@ The shared secret agreed upon by Alice and Bob was determined to be 12. Work is 
 
 ===RSA===
 
-The encrypted message that 
+The encrypted message is 'Dear Bob, Check this out.  https://www.schneier.com/blog/archives/2017/12/e-mail_tracking_1.html Yikes! Your friend, Alice'. Work is shown on the pdf and the python file. To figure out the message, I had to first figure out p_B and q_B by brute forcing the calculations. Then I was able to figure out d_B by using wolfram which turned out to be 2335. With d_B I could then take each integer in Alice's ciphertext and write a Python program that will compute the equation for each integer and then decrypt the message. If n_B was too large, my process would have failed because it could have taken a much much longer time to brute force my way into finding the values of p_B and q_B. 
